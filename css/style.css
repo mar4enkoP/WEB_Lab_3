@@ -1,0 +1,56 @@
+.background {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    /* фон затемнения */
+    background-color: rgba(0, 0, 0, 0.65);
+    position: fixed;
+    cursor: default;
+}
+
+.background:target {
+    display: block;
+}
+
+.block {
+    transition: .55s opacity;
+    font-family: monospace;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    z-index: 20;
+    position: fixed;
+    padding: 45px;
+    border-radius: 10px;
+    background: #fefefe;
+
+}
+
+.background:target + .block {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.buttonOne {
+    position: absolute;
+    margin: 20px;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    background-color: #0e1e2a;
+    outline: none;
+    color: white;
+    padding: 20px 20px 20px 20px;
+}
+
+.buttonOne:hover {
+    background-color: #519cb7;
+}
