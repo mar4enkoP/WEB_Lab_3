@@ -4,34 +4,30 @@
     bottom: 0;
     left: 0;
     z-index: 10;
-    display: none;
     background-color: rgba(0, 0, 0, 0.65);
     position: fixed;
     cursor: default;
 }
 
-.background:target {
-    display: block;
+.capsule{
+    transition: .55s ;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .block {
-    transition: .55s opacity;
     font-family: monospace;
     top: 50%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    opacity: 0;//
-    visibility: hidden;
     font-size: 14px;
     z-index: 20;
     position: fixed;
     padding: 45px;
     border-radius: 10px;
     background: #fefefe;
-
 }
-
 
 .buttonOne {
     position: absolute;
@@ -47,4 +43,9 @@
 
 .buttonOne:hover {
     background-color: #519cb7;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
 }
